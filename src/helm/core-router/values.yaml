@@ -1,0 +1,20 @@
+nameOverride: ""
+fullnameOverride: ""
+
+
+nginx-ingress:
+  enabled: true
+  fullnameOverride: nginx-ingress
+  rbac:
+    create: true
+  controller:
+    kind: DaemonSet
+    image:
+      repository: quay.io/kubernetes-ingress-controller/nginx-ingress-controller-arm
+    ingressClass: nginx
+    hostNetwork: true
+    dnsPolicy: ClusterFirstWithHostNet
+    service:
+      externalTrafficPolicy: Local
+  defaultBackend:
+    enabled: false
