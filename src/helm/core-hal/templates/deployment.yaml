@@ -27,17 +27,15 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          command: [ "/bin/bash", "-c", "--" ]
-          args: [ "while true; do sleep 30; done;" ]
-          volumeMounts:
-          - mountPath: /dev/ttyACM0
-            name: ttyacm
+          # volumeMounts:
+          # - mountPath: /dev/ttyACM0
+          #   name: ttyacm
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-      volumes:
-        - name: ttyacm
-          hostPath:
-            path: /dev/ttyACM0
+      # volumes:
+      #   - name: ttyacm
+      #     hostPath:
+      #       path: /dev/ttyACM0
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

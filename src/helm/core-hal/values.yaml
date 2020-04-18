@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: ubuntu
+  repository: emberstack/project-no-name-serial-detector
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ProjectNoName.SerialPortDetector": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
