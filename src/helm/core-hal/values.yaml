@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: emberstack/project-no-name-serial-detector
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
 
 imagePullSecrets: []
 nameOverride: ""

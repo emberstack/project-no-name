@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO.Ports;
+using System.Threading;
 
 namespace ProjectNoName.SerialPortDetector
 {
@@ -7,11 +8,17 @@ namespace ProjectNoName.SerialPortDetector
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Starting port detection");
-            var ports = SerialPort.GetPortNames();
-            foreach (var port in ports)
+            while (true)
             {
-                Console.WriteLine($"Found: {port}");
+
+                Console.WriteLine("Starting port detection");
+                var ports = SerialPort.GetPortNames();
+                foreach (var port in ports)
+                {
+                    Console.WriteLine($"Found: {port}");
+                }
+
+                Thread.Sleep(5_000);
             }
         }
     }
