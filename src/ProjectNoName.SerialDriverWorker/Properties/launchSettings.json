@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "ProjectNoName.SerialDriverWorker": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
